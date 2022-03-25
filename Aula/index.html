@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React</title>
+</head>
+
+<body>
+  <div class="button_container"></div>
+  <div class="button_container2"></div>
+  <!-- Primeiramente tem que fazer a importação do React -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <!-- É a biblioteca onde tem as funções e tals-->
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <!-- É onde faz a integração do react com o DOM-->
+
+  <script>
+    //Feita a importação basta chamar o "React" onde tem diversas funções.
+    const botao = React.createElement('button', { style: { background: 'black', color: 'white' } }, 'Clique Aqui!'); //Nesse caso do createElement, é preciso passar algumas parâmetros, primeiramente a tag html, depois as classes que essa tag vai ter, e depois o texto em si.
+    const divBotao = document.querySelector('.button_container');
+    const divBotao2 = document.querySelector('.button_container2');
+
+    ReactDOM.render(botao, divBotao); //Parâmetros: Qual o elemento que vai renderizar na tela, e em qual elemento ele vai renderizar.
+    ReactDOM.render(botao, divBotao2);
+  </script>
+</body>
+
+</html>

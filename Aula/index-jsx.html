@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React com JSX</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <div id="root2"></div>
+
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> <!-- Importação do JSX -->
+
+  <script type="text/babel"> //Isso aqui é para o babel entender que  é para transformar isso que ta aqui dentro em javascript "normal"
+    const botao = <button>Clique Aqui</button> //Em vez de passar os parâmetros você litarlmente coloca uma tag html dentro de uma variável.
+    const root = document.querySelector('#root');
+    const root2 = document.querySelector('#root2');
+
+    ReactDOM.render(botao, root);
+    ReactDOM.render(botao, root2);
+  </script>
+</body>
+
+</html>
